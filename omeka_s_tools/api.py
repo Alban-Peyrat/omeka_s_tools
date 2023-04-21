@@ -113,7 +113,7 @@ class OmekaAPIClient(object):
         Returns
         * a dict containing a JSON-LD formatted representation of the resource
         '''
-        response = self.s.get(f'{self.api_url}/{resource_type}/{resource_id}')
+        response = self.s.get(f'{self.api_url}/{resource_type}/{resource_id}', params=self.params)
         data = self.process_response(response)
         return data
 
